@@ -74,12 +74,19 @@ DS.to_csv(File_Addr_To_Save)
 
 """ ----------------------------  Dataset Preprocessing --------------------------"""
 
+""" Check the Null Value in DS """
+tmp=DS.isna().sum() # if All Columns are 0 (Zero), This dataset is okey!!
 
-
-
-
-
-
+for i in range(len(tmp)):
+    if tmp[i]!=0:
+        print("Num:", tmp[i], "index:", i)
+        
+ ## ]In this section Index of Columns which have null value
+ 
+ """ َ--------------------------- Autoencoder Implementation -------------------- """
+ 
+ 
+ 
 """
 Read Dataset
 ds.loc['RowName']['Colname']
